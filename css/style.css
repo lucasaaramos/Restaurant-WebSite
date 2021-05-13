@@ -1,0 +1,108 @@
+body {
+      
+    background-image: url('/img/rest.jpg');
+    background-repeat: no-repeat;
+    background-size: 1500px;
+}
+
+
+
+
+#submitButtom {
+    width: 30%;
+    text-align: center;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+  
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+
+  
+/* Add a green text color and a checkmark when the requirements are right */
+.valid, .valid1 {
+    color: green;
+}
+  
+.valid:before, .valid1:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+  
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid, .invalid1 {
+    color: red;
+}
+  
+.invalid:before, .invalid1:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+
+
+
+
+
+.container {
+    position: center;
+    margin-top: 550px;
+    margin-bottom: 100px;
+    text-align: center;
+    
+    width: 50%;
+    margin-left: 25%;
+    
+}
+
+.button {
+   
+    position: relative;
+    background-color: #5aaa5a;
+    border-radius: 15px;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
