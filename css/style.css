@@ -106,3 +106,130 @@ body {
     transition: 0s
 }
 
+.menuItem {
+    background-color: #90EE90;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    color: green;
+    border: 1px solid green;
+    margin-top: 50px;
+}
+
+
+
+
+table {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+    border: 1px solid green;
+}
+
+th, td {
+    
+    padding: 15px;
+    height: 50px;
+    text-align: left;
+    font-size: 15px; 
+}
+
+.value1{
+    display: inline-block;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+.total {
+    margin-top: 100px;
+    margin-left: 40%;
+    margin-right: 35%;
+    justify-content:center;
+    width: 40%;
+    position: center;
+}
+
+.starters {
+    width: 40%;
+    height: 25%;
+    border: 1px solid green;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+
+
+
+
+
+#ItemsTotal, #ItemsMainTotal, #ItemsDessertTotal, #ItemsDrinkTotal, #BillTotal, #Veg_Food, #NonVeg_Food{
+    
+    background-color: rgb(91, 218, 91);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    
+}
+
+.randon {
+    color: green;
+}
+
+
+
+
+
+
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+  
+/* Style the submit button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+
+  
+  
+  
+/* Style the container for inputs */
+.container1 {
+
+    margin-top: 220px;
+    border-radius: 30px;
+    width: 40%;
+    background-color: #90EE90;
+    padding: 5%;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    justify-content: center;
+}
+
+#submitButtom {
+    width: 40%;
+}
+
+.textpass {
+    color: green;
+    size: 50px;
+}
+ 
+  
