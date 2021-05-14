@@ -56,5 +56,36 @@ myInput.onkeyup = function() {
         caracterNumb.classList.add("invalid");
     }
  
+}
+
+document.getElementById('getRandom').addEventListener('click', getRandom);
+
+function getRandom(){
+    fetch('https://randomuser.me/api/?results=5')
+    .then((res) => res.json())
+    .then((data) => {
+        let author = data.results;
+        let output = ' </br></br></br>'
+        console.log(data);
+        author.forEach(function(user){
+            output += `
+            <div class="randon">
+               
+                <img src="${user.picture.medium}">
+                <h4>${user.name.first} ${user.name.last}</h4>
+                <h4>${user.email}</h4>
+                <h4>${user.gender}</h4>
+                <h4>${user.location.city}</h4>
+                <h4>${user.phone}</h4>
+                </br></br></br> 
+              
+            </div>
+            `;
+        });
+
+        document.getElementById('output').innerHTML = output;
+
+    })
 
 }
+
