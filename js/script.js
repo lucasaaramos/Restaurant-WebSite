@@ -89,3 +89,133 @@ function getRandom(){
 
 }
 
+
+let totalValue = [];    
+    
+var total_items=3;
+
+    function CalculateItemsValue(){
+        var total=0;
+        for(let i=1; i <= total_items; i++){
+            itemID = document.getElementById("qtd_" + i);
+            total = total + parseInt(itemID.value) * parseInt(itemID.
+            getAttribute("data-price"));  
+
+        }
+        document.getElementById('ItemsTotal').innerHTML = "$" + total;
+        totalValue[0] = total;
+    }
+
+    document.querySelectorAll('[id^="qtd_"]').forEach(item => {
+        item.addEventListener("keyup", CalculateItemsValue)
+    })
+
+
+var total_main=4;
+
+    function CalculateItemsMainValue(){
+        var total=0;
+        for(let i=1; i <= total_main; i++){
+            itemID = document.getElementById("main_" + i);
+            total = total + parseInt(itemID.value) * parseInt(itemID.
+            getAttribute("data-mainPrice"));  
+
+        }
+        document.getElementById('ItemsMainTotal').innerHTML = "$" + total;
+        totalValue[1] = total;
+    }
+
+    document.querySelectorAll('[id^="main_"]').forEach(item => {
+        item.addEventListener("keyup", CalculateItemsMainValue)
+    })
+
+
+var total_mainveg=1;
+
+    function CalculateItemsVegValue(){
+        var total=0;
+        for(let i=1; i <= total_mainveg; i++){
+            itemID = document.getElementById("main_" + i);
+            total = total + parseInt(itemID.value) * parseInt(itemID.
+            getAttribute("data-mainPrice"));  
+
+        }
+        document.getElementById('Veg_Food').innerHTML = "$" + total;
+        totalValue[1] = total;
+    }
+
+    document.querySelectorAll('[id^="main_"]').forEach(item => {
+        item.addEventListener("keyup", CalculateItemsVegValue)
+    })
+
+var total_mainNonveg=4;
+
+    function CalculateItemsNonVegValue(){
+        var total=0;
+        for(let i=2; i <= total_mainNonveg; i++){
+            itemID = document.getElementById("main_" + i);
+            total = total + parseInt(itemID.value) * parseInt(itemID.
+            getAttribute("data-mainPrice"));  
+
+        }
+        document.getElementById('NonVeg_Food').innerHTML = "$" + total;
+        totalValue[1] = total;
+    }
+
+    document.querySelectorAll('[id^="main_"]').forEach(item => {
+        item.addEventListener("keyup", CalculateItemsNonVegValue)
+    })
+
+    
+    
+var total_dessert=3;
+
+    function CalculateItemsDessertValue(){
+        var total=0;
+        for(let i=1; i <= total_dessert; i++){
+            itemID = document.getElementById("dessert_" + i);
+            total = total + parseInt(itemID.value) * parseInt(itemID.
+            getAttribute("data-dessertPrice"));  
+
+        }
+        document.getElementById('ItemsDessertTotal').innerHTML = "$" + total;
+        totalValue[2] = total;
+    }
+
+    document.querySelectorAll('[id^="dessert_"]').forEach(item => {
+        item.addEventListener("keyup", CalculateItemsDessertValue)
+    })
+
+    
+var total_drink=3;
+    function CalculateItemsDrinkValue(){
+        var total=0;
+        for(let i=1; i <= total_drink; i++){
+            itemID = document.getElementById("drink_" + i);
+            total = total + parseInt(itemID.value) * parseInt(itemID.
+            getAttribute("data-drinkPrice"));  
+
+        }
+        document.getElementById('ItemsDrinkTotal').innerHTML = "$" + total;
+        totalValue.push(total);
+    }
+
+    document.querySelectorAll('[id^="drink_"]').forEach(item => {
+        item.addEventListener("keyup", CalculateItemsDrinkValue)
+    })    
+
+    
+    
+    
+    
+    
+    
+    
+    function CalculateTotalBill(){
+      
+        document.getElementById('BillTotal').innerHTML = "$" + '10';
+    }
+
+    
+    
+
