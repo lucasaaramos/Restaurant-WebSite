@@ -6,8 +6,6 @@ body {
 }
 
 
-
-
 #submitButtom {
     width: 30%;
     text-align: center;
@@ -56,8 +54,6 @@ body {
 
 
 
-
-
 .container {
     position: center;
     margin-top: 550px;
@@ -69,6 +65,7 @@ body {
     
 }
 
+/* setting position and transition for the buttom*/
 .button {
    
     position: relative;
@@ -83,7 +80,7 @@ body {
     transition-duration: 0.4s;
     text-decoration: none;
     overflow: hidden;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .button:after {
@@ -106,6 +103,33 @@ body {
     transition: 0s
 }
 
+
+.buttom {
+    position: relative;
+    background-color: #5aaa5a;
+    border-radius: 15px;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer; 
+    margin-left:550px;
+}
+
+.textabout {
+    text-align: center;
+    color: green;
+    size: 150px;
+
+
+}
+
+/* menu position */
 .menuItem {
     background-color: #90EE90;
     width: 60%;
@@ -169,7 +193,7 @@ th, td {
 
 
 
-
+/* prices */
 #ItemsTotal, #ItemsMainTotal, #ItemsDessertTotal, #ItemsDrinkTotal, #BillTotal, #Veg_Food, #NonVeg_Food{
     
     background-color: rgb(91, 218, 91);
@@ -182,12 +206,6 @@ th, td {
 .randon {
     color: green;
 }
-
-
-
-
-
-
 
 input {
     width: 100%;
@@ -232,4 +250,49 @@ input[type=submit] {
     size: 50px;
 }
  
-  
+/* image slider */  
+#slider {
+
+    width: 100%;
+   
+    height: 650px;
+    
+
+    position: relative;
+
+}
+
+#slider img{
+
+    opacity: 0;
+
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    
+    object-fit: cover;
+
+    transition: opacity 800ms;
+
+    background-color: rgb(153, 74, 153);
+}
+
+#slider img.selected {
+
+    opacity: 1;
+}
+
+/* menu info */
+.container_contact, .contact, .center {
+    text-align: center;
+    color: green;
+}
+
+.name, .email, .message {
+    width: 30%;
+}
+
+.buttomtext {
+    width: 10%;
+    background-color: #4CAF50;
+}

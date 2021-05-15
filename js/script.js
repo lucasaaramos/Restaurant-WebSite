@@ -1,6 +1,5 @@
-var myInput = document.getElementById("credit");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
+
+var myInput = document.getElementById("pass");
 
 // When the user clicks on the password field, show the message box
 myInput.onfocus = function() {
@@ -55,9 +54,12 @@ myInput.onkeyup = function() {
         caracterNumb.classList.remove("valid");
         caracterNumb.classList.add("invalid");
     }
- 
 }
 
+
+
+
+//Getting random users
 document.getElementById('getRandom').addEventListener('click', getRandom);
 
 function getRandom(){
@@ -90,6 +92,9 @@ function getRandom(){
 }
 
 
+
+
+//calculating the starters prices    
 let totalValue = [];    
     
 var total_items=3;
@@ -110,7 +115,7 @@ var total_items=3;
         item.addEventListener("keyup", CalculateItemsValue)
     })
 
-
+//calculating the main prices  
 var total_main=4;
 
     function CalculateItemsMainValue(){
@@ -129,7 +134,7 @@ var total_main=4;
         item.addEventListener("keyup", CalculateItemsMainValue)
     })
 
-
+//calculating the main veg prices  
 var total_mainveg=1;
 
     function CalculateItemsVegValue(){
@@ -148,6 +153,7 @@ var total_mainveg=1;
         item.addEventListener("keyup", CalculateItemsVegValue)
     })
 
+//calculating the non veg prices  
 var total_mainNonveg=4;
 
     function CalculateItemsNonVegValue(){
@@ -167,7 +173,7 @@ var total_mainNonveg=4;
     })
 
     
-    
+//calculating the dessert prices      
 var total_dessert=3;
 
     function CalculateItemsDessertValue(){
@@ -186,7 +192,7 @@ var total_dessert=3;
         item.addEventListener("keyup", CalculateItemsDessertValue)
     })
 
-    
+//calculating the drinks prices      
 var total_drink=3;
     function CalculateItemsDrinkValue(){
         var total=0;
@@ -204,45 +210,58 @@ var total_drink=3;
         item.addEventListener("keyup", CalculateItemsDrinkValue)
     })    
 
-
+     
     
-    function CalculateTotalBill(){
+function CalculateTotalBill(){
       
-        document.getElementById('BillTotal').innerHTML = "$" + '10';
-    }
+    document.getElementById('BillTotal').innerHTML = "$" + '10';
+}
 
-    
-    
+ 
 
-    let time = 3000,
+//slide of images
+let time = 3000,
 
-    currentImageIndex = 0,
-    images = document.querySelectorAll ("#slider img")
-    max = images.length;
-    
-    
-    function nextImage() {
-    
-      images[currentImageIndex].classList.remove("selected")
-    
-      currentImageIndex++;
-    
-      if (currentImageIndex >= max) 
-      currentImageIndex = 0;
-    
-      images[currentImageIndex].classList.add("selected")
-    
-    }
-    
-    
-    function start () {
-    
-      setInterval(() => {
-    
-        //troca de imagem
-        nextImage()
-    
-      }, time)
-    }
-    
-    window.addEventListener("load", start)
+currentImageIndex = 0,
+images = document.querySelectorAll ("#slider img")
+max = images.length;
+
+
+function nextImage() {
+
+  images[currentImageIndex].classList.remove("selected")
+
+  currentImageIndex++;
+
+  if (currentImageIndex >= max) 
+  currentImageIndex = 0;
+
+  images[currentImageIndex].classList.add("selected")
+
+}
+
+
+function start () {
+
+  setInterval(() => {
+
+    //troca de imagem
+    nextImage()
+
+  }, time)
+}
+
+window.addEventListener("load", start)
+
+
+//jQuery example
+$(document).ready(function() {
+    $('#hide').click(function() {
+      $("p").toggle();
+    });
+    $('#show').click(function(){
+        $('p').show();
+    })
+
+})
+
